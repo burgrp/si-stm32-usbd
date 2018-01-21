@@ -5,11 +5,11 @@
 	},
 	"silicon": {
 		"sources": [
-			"src/UsbEndpoint.cpp",
-			"src/UsbInterface.cpp",
-			"src/UsbConfiguration.cpp",
-			"src/DefaultEndpoint.cpp",
-			"src/UsbDevice.cpp"
+			"src/usb-endpoint.cpp",
+			"src/usb-interface.cpp",
+			"src/usb-configuration.cpp",
+			"src/default-endpoint.cpp",
+			"src/usb-device.cpp"
 		]
 	}
 }
