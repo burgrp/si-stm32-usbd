@@ -189,7 +189,7 @@ namespace usbd {
 
 			descriptor[ 0] = DEVICE_DESCRIPTOR_SIZE; // Size of the Descriptor in Bytes (18 bytes)
 			descriptor[ 1] = DEVICE_DESCRIPTOR; // Device Descriptor (0x01)
-			descriptor[ 2] = 0x01; // USB Specification Number which device complies too.
+			descriptor[ 2] = 0x10; // USB Specification Number which device complies too.
 			descriptor[ 3] = 0x01; // |
 			descriptor[ 4] = 0; // Class Code (Assigned by USB Org)
 			descriptor[ 5] = 0; // Subclass Code (Assigned by USB Org)
