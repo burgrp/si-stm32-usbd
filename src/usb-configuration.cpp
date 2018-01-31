@@ -1,6 +1,6 @@
 namespace usbd {
 
-#define MAX_INTERFACES 8
+	const int MAX_INTERFACES = 8;
 
 	class UsbConfiguration {
 	public:

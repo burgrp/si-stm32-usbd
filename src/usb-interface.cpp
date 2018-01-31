@@ -1,6 +1,6 @@
 namespace usbd {
 
-#define MAX_ENDPOINTS 8
+	const int MAX_ENDPOINTS = 8;
 
 	class UsbInterface {
 	public:

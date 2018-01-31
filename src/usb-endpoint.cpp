@@ -1,16 +1,16 @@
 namespace usbd {
 
-#define EP_DIS       (0x000) /* EndPoint DISabled */
-#define EP_STALL     (0x001) /* EndPoint STALLed */
-#define EP_NAK       (0x002) /* EndPoint NAKed */
-#define EP_VALID     (0x003) /* EndPoint VALID */
+	const int EP_DIS = 0x000; /* EndPoint DISabled */
+	const int EP_STALL = 0x001; /* EndPoint STALLed */
+	const int EP_NAK = 0x002; /* EndPoint NAKed */
+	const int EP_VALID = 0x003; /* EndPoint VALID */
 
-#define EP_TYPE_CONTROL      0
-#define EP_TYPE_ISOCHRONOUS  1
-#define EP_TYPE_BULK         2
-#define EP_TYPE_INTERRUPT    3
+	const int EP_TYPE_CONTROL = 0;
+	const int EP_TYPE_ISOCHRONOUS = 1;
+	const int EP_TYPE_BULK = 2;
+	const int EP_TYPE_INTERRUPT = 3;
 
-#define PACKET_MEMORY_BASE 0x40006000
+	const int PACKET_MEMORY_BASE = 0x40006000;
 
 	typedef struct UsbBufferDescriptor {
 		short ADDR_TX, COUNT_TX, ADDR_RX, COUNT_RX;
@@ -107,6 +107,10 @@ namespace usbd {
 
 			statTx(EP_VALID);
 		}
+		
+		void sendZLP() {
+			send(NULL, 0);
+		}
 
 		virtual void correctTransferSetup(unsigned char* data, int len) {
 			statRx(EP_VALID);
@@ -156,7 +160,5 @@ namespace usbd {
 			epType = EP_TYPE_INTERRUPT;
 		}
 	};
-
-#define sendZLP() send(NULL, 0)
 
 }
