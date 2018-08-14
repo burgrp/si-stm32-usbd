@@ -1,8 +1,7 @@
 {
 	"name": "@device.farm/si-stm32-usbd",
-	"version": "1.0.0",
-	"dependencies": {
-	},
+	"version": "1.0.1",
+	"dependencies": {},
 	"silicon": {
 		"sources": [
 			"src/usb-endpoint.cpp",
