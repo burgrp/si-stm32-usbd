@@ -33,10 +33,6 @@ namespace usbd {
 
 		virtual void init() {
 
-			// remap USB to PA9/10 for TSSOP 20, no effect for other devices
-			target::RCC.APB2ENR.setSYSCFGEN(1);
-			//    SYSCFG.CFGR1 = SYSCFG.CFGR1 | (1 << 4);
-
 			// reset USB and CRS peripherals
 			target::RCC.APB1RSTR.setCRSRST(1);
 			target::RCC.APB1RSTR.setCRSRST(0);
